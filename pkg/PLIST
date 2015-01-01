@@ -1,0 +1,18 @@
+@comment $OpenBSD: PLIST,v 1.3 2014/07/16 12:36:27 jca Exp $
+@newgroup _authproxd:800
+@newuser _authproxd:800:_authproxd::authproxd sshd user:/var/empty:/sbin/nologin
+@newgroup _authprox:801
+@newuser _authprox:801:_authprox::authprox login user:/var/empty:/sbin/nologin
+@rcscript ${RCDIR}/authproxd
+bin/authprox
+bin/apsh
+bin/authprox_expire_sessions
+bin/authprox_sshd_config
+etc/authproxd/ssh_config
+etc/authproxd/sshd_config
+lib/python${MODPY_VERSION}/site-packages/authprox/__init__.py
+lib/python${MODPY_VERSION}/site-packages/authprox/__init__.pyc
+lib/python${MODPY_VERSION}/site-packages/lispy/__init__.py
+lib/python${MODPY_VERSION}/site-packages/lispy/__init__.pyc
+lib/python${MODPY_VERSION}/site-packages/authprox-1.0-py${MODPY_VERSION}.egg-info/PKG-INFO
+

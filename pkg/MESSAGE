@@ -1,0 +1,9 @@
+- configuration files are in ${SYSCONFDIR}/etc/authproxd
+
+You will need to either generate or copy into place a set of hostkeys for this authprox gateway
+
+/usr/bin/ssh-keygen -t ed25519 -f ${SYSCONFDIR}/authproxd/ssh_host_ed25519_key -P ""
+/usr/bin/ssh-keygen -t dsa -f ${SYSCONFDIR}/authproxd/ssh_host_dsa_key -P ""
+/usr/bin/ssh-keygen -t ecdsa -f ${SYSCONFDIR}/authproxd/ssh_host_ecdsa_key -P ""
+/usr/bin/ssh-keygen -t rsa -f ${SYSCONFDIR}/authproxd/ssh_host_rsa_key -P ""
+/usr/bin/ssh-keygen -t rsa1 -f ${SYSCONFDIR}/authproxd/ssh_host_key -P ""
