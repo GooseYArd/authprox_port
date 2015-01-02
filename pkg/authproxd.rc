@@ -2,16 +2,14 @@
 #
 # $OpenBSD: authproxd,v 1.0 2013/02/05 00:26:31 halex Exp $
 
-daemon="/usr/sbin/sshd"
+#daemon_user="_authproxd"
+daemon="/usr/local/sbin/authproxd"
+daemon_flags="-f /usr/local/etc/authproxd/sshd_config"
 
 . /etc/rc.d/rc.subr
 
-rc_pre() {
-    /usr/local/bin/authprox-keygen
-}
-
 rc_reload() {
-	${daemon} -f /usr/local/lib/python2.7/site-packages/authprox/etc/sshd_config  ${daemon_flags} -t && pkill -HUP -f "^${pexp}"
+	${daemon} ${daemon_flags} -t && pkill -HUP -f "^${pexp}"
 }
 
 rc_cmd $1

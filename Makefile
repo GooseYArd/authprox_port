@@ -31,5 +31,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${WRKINST}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/authprox/etc/ssh_config ${WRKINST}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/authprox/etc/sshd_config ${WRKINST}${ETCDIR}
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
+	ln -sf /usr/sbin/sshd ${PREFIX}/sbin/authproxd
 
 .include <bsd.port.mk>

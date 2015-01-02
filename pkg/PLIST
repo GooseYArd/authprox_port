@@ -1,12 +1,14 @@
 @comment $OpenBSD: PLIST,v 1.3 2014/07/16 12:36:27 jca Exp $
-@newgroup _authproxd:800
-@newuser _authproxd:800:_authproxd::authproxd sshd user:/var/empty:/sbin/nologin
-@newgroup _authprox:801
-@newuser _authprox:801:_authprox::authprox login user:/var/empty:/sbin/nologin
+@newgroup authprox:800
+@newuser authprox:800:authprox::authprox login user:/home/authprox:/bin/sh
 @bin bin/authprox
 @bin bin/apsh
 @bin bin/authprox_expire_sessions
 @bin bin/authprox_sshd_config
+@bin bin/authprox_user_config
+@bin bin/authprox_agent_init
+@bin bin/authprox_add_key
+@bin sbin/authproxd
 lib/python${MODPY_VERSION}/site-packages/authprox/
 lib/python${MODPY_VERSION}/site-packages/authprox/etc/
 lib/python${MODPY_VERSION}/site-packages/authprox/etc/sshd_config
@@ -19,6 +21,12 @@ lib/python${MODPY_VERSION}/site-packages/authprox/authprox.py
 lib/python${MODPY_VERSION}/site-packages/authprox/authprox.pyc
 lib/python${MODPY_VERSION}/site-packages/authprox/sshd_config.py
 lib/python${MODPY_VERSION}/site-packages/authprox/sshd_config.pyc
+lib/python${MODPY_VERSION}/site-packages/authprox/user_config.py
+lib/python${MODPY_VERSION}/site-packages/authprox/user_config.pyc
+lib/python${MODPY_VERSION}/site-packages/authprox/agent_init.py
+lib/python${MODPY_VERSION}/site-packages/authprox/agent_init.pyc
+lib/python${MODPY_VERSION}/site-packages/authprox/add_key.py
+lib/python${MODPY_VERSION}/site-packages/authprox/add_key.pyc
 lib/python${MODPY_VERSION}/site-packages/lispy/
 lib/python${MODPY_VERSION}/site-packages/lispy/__init__.py
 lib/python${MODPY_VERSION}/site-packages/lispy/__init__.pyc

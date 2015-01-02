@@ -1,4 +1,9 @@
 You will need to generate an sshd configuration and host keys
 
+To do this automatically, run:
+
+/usr/local/bin/authprox_sshd_config /usr/local/etc/authproxd
+
+
 
 
