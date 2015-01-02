@@ -6,15 +6,26 @@
 @bin bin/authprox
 @bin bin/apsh
 @bin bin/authprox_expire_sessions
-@bin bin/authprox-keygen
+@bin bin/authprox_sshd_config
 lib/python${MODPY_VERSION}/site-packages/authprox/
 lib/python${MODPY_VERSION}/site-packages/authprox/etc/
 lib/python${MODPY_VERSION}/site-packages/authprox/etc/sshd_config
 lib/python${MODPY_VERSION}/site-packages/authprox/etc/ssh_config
 lib/python${MODPY_VERSION}/site-packages/authprox/__init__.py
 lib/python${MODPY_VERSION}/site-packages/authprox/__init__.pyc
+lib/python${MODPY_VERSION}/site-packages/authprox/apsh.py
+lib/python${MODPY_VERSION}/site-packages/authprox/apsh.pyc
+lib/python${MODPY_VERSION}/site-packages/authprox/authprox.py
+lib/python${MODPY_VERSION}/site-packages/authprox/authprox.pyc
+lib/python${MODPY_VERSION}/site-packages/authprox/sshd_config.py
+lib/python${MODPY_VERSION}/site-packages/authprox/sshd_config.pyc
 lib/python${MODPY_VERSION}/site-packages/lispy/
 lib/python${MODPY_VERSION}/site-packages/lispy/__init__.py
 lib/python${MODPY_VERSION}/site-packages/lispy/__init__.pyc
+lib/python${MODPY_VERSION}/site-packages/authprox-1.0-py${MODPY_VERSION}.egg-info/
 lib/python${MODPY_VERSION}/site-packages/authprox-1.0-py${MODPY_VERSION}.egg-info/PKG-INFO
+lib/python${MODPY_VERSION}/site-packages/authprox-1.0-py${MODPY_VERSION}.egg-info/top_level.txt
+lib/python${MODPY_VERSION}/site-packages/authprox-1.0-py${MODPY_VERSION}.egg-info/dependency_links.txt
+lib/python${MODPY_VERSION}/site-packages/authprox-1.0-py${MODPY_VERSION}.egg-info/entry_points.txt
+lib/python${MODPY_VERSION}/site-packages/authprox-1.0-py${MODPY_VERSION}.egg-info/SOURCES.txt
 @rcscript ${RCDIR}/authproxd
