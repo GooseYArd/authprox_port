@@ -8,6 +8,7 @@ GH_TAGNAME=		1.0
 
 MODPY_EGG_VERSION =     1.0
 DISTNAME=		${GH_PROJECT}-${GH_TAGNAME}
+DISTNAME=		authprox-1.0
 CATEGORIES =		net
 SHARED_ONLY =		Yes
 SHARED_LIBS +=
@@ -22,15 +23,10 @@ WANTLIB=
 MODULES=        lang/python
 MODPY_SETUPTOOLS=       Yes
 
-#pre-fake:
-#	${INSTALL_DATA_DIR} ${WKRINST}${SYSCONFDIR}/authproxd
-
 ETCDIR=	${PREFIX}/etc/authproxd
 
-pre-install:
-	${INSTALL_DATA_DIR} ${WRKINST}${ETCDIR}
-	${INSTALL_DATA} ${WRKSRC}/authprox/etc/ssh_config ${WRKINST}${ETCDIR}
-	${INSTALL_DATA} ${WRKSRC}/authprox/etc/sshd_config ${WRKINST}${ETCDIR}
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/authproxd
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
 	ln -sf /usr/sbin/sshd ${PREFIX}/sbin/authproxd
 
